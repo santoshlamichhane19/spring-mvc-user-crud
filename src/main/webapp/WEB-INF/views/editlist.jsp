@@ -8,10 +8,7 @@
 		<c:if test="${!empty user}">	  
 	    <form class="col-md-5 m-4 p-4 shadow align-items-center border border-danger" method="POST" action="update_user">
 	        <div class="form-group">
-	            <label>
-	                <strong>ID</strong>
-	            </label>
-	            <input class="form-control" type="text" value="${user.id}" name="id" readonly>
+	            <input class="form-control" type="text" value="${user.id}" name="id" hidden>
 	        </div>
 	        
 	        <div class="form-group">

@@ -1,125 +1,138 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.learning</groupId>
-  <artifactId>user_management</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>user_management Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  
-  <!-- using spring expression language 
-  	<spring-version></spring-version> in child <version>${spring-version}</version>
-   -->
-  
- <properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<spring-version>5.1.5.RELEASE</spring-version>
-		<hibernate-version>5.4.12.Final</hibernate-version>
-		<apache-connection-pooling-version>1.4</apache-connection-pooling-version>
-	</properties>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.learning</groupId>
+    <artifactId>user_management</artifactId>
+    <packaging>war</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>user_management Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+    <!-- using spring expression language
+        <spring-version></spring-version> in child <version>${spring-version}</version>
+     -->
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <spring-version>5.1.5.RELEASE</spring-version>
+        <hibernate-version>5.4.12.Final</hibernate-version>
+        <apache-connection-pooling-version>1.4</apache-connection-pooling-version>
+    </properties>
 
     <dependencies>
 
-    
-    <dependency>
-	    <groupId>org.springframework.security</groupId>
-	    <artifactId>spring-security-core</artifactId>
-	    <version>${spring-version}</version>
-	</dependency>
-	
-	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-core</artifactId>
-	    <version>${spring-version}</version>
-	</dependency>
-    
-	<dependency>
-	    <groupId>javax.servlet</groupId>
-	    <artifactId>servlet-api</artifactId>
-	    <version>2.5</version>
-	    <scope>provided</scope>
-	</dependency>
-	
-	 <dependency>
-    	<groupId>org.springframework.data</groupId>
-    	<artifactId>spring-data-jpa</artifactId>
-    	<version>2.1.5.RELEASE</version>
-    </dependency>
-	
-    <dependency>
-    	<groupId>javax.servlet.jsp</groupId>
-    	<artifactId>javax.servlet.jsp-api</artifactId>
-    	<version>2.3.1</version>
-    	
-    </dependency>
-    <dependency>
-    	<groupId>jstl</groupId>
-    	<artifactId>jstl</artifactId>
-    	<version>1.2</version>
-    	
-    </dependency>
-    
-     <dependency>
-    	<groupId>javax.servlet</groupId>
-    	<artifactId>javax.servlet-api</artifactId>
-    	<version>3.1.0</version>
-    	<scope>provided</scope>
-    	
-    </dependency>
-<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${spring-version}</version>
-		</dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${spring-version}</version>
-		</dependency>
-		
-		
-		<!-- Apache's Database Connection Pooling -->
-		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>${apache-connection-pooling-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-pool</groupId>
-			<artifactId>commons-pool</artifactId>
-			<version>${apache-connection-pooling-version}</version>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.48</version>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>${hibernate-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate-version}</version>
-		</dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
 
-		
-		<!-- https://mvnrepository.com/artifact/javax.transaction/javax.transaction-api -->
-			<dependency>
-			    <groupId>javax.transaction</groupId>
-			    <artifactId>javax.transaction-api</artifactId>
-			    <version>1.2</version>
-			</dependency>
-			
-  </dependencies>
-  <build>
-    <finalName>user_management</finalName>
-  </build>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.1.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.1</version>
+
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+
+
+        <!-- Apache's Database Connection Pooling -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>${apache-connection-pooling-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-pool</groupId>
+            <artifactId>commons-pool</artifactId>
+            <version>${apache-connection-pooling-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.48</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate-version}</version>
+        </dependency>
+         <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>javax.transaction-api</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <finalName>user_management</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
+        </plugins>
+
+    </build>
+
+
 </project>

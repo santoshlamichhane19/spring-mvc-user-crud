@@ -13,7 +13,7 @@
 		<table class="table shadow">
 			<thead>
 				<tr>
-					<th scope="col">ID</th>
+					<th scope="col">SN</th>
 					<th scope="col">Username</th>
 					<th scope="col">First Name</th>
 					<th scope="col">Last Name</th>
@@ -23,10 +23,10 @@
 			</thead>
 			
 		
-				<c:forEach items="${users}" var="user">
+				<c:forEach items="${users}" var="user" varStatus="count">
 					<tbody>
 						<tr>
-							<td scope="row">${user.id}</td>
+							<td scope="row">${count.count}</td>
 							<td>${user.username}</td>
 							<td>${user.firstname}</td>
 							<td>${user.lastname}</td>

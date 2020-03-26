@@ -26,10 +26,7 @@ public class UserRepoImpl implements UserRepo {
     @Override
     public void updateUser(User user) {
         Session session = HibernateUtil.getSession(sessionFactory);
-        session.beginTransaction();
         session.update(user);
-        session.getTransaction().commit();
-        session.close();
 
     }
 
