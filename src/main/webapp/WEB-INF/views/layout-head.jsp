@@ -24,6 +24,9 @@
 	            <li class="nav-item">
 	                <a class="nav-link active btn btn-sm btn-primary m-2 " href="list_user"><i class="fa fa-lg mr-2 fa-tasks"></i>List Users </a>
 	            </li>
+	            <li class="nav-item">
+	                <a class="nav-link active btn btn-sm btn-primary m-2 " href="#blog"><i class="fa fa-lg mr-2 fa-book"></i>Blog</a>
+	            </li>
 	        </ul>
 	    </nav>
 	
